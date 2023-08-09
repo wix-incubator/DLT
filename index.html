@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DLT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Codemirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Codemirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+
+    <!-- Clipboard JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KEX211GQ41"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KEX211GQ41');
+    </script>
+
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                DLT: Conditioned layout generation with Joint Discrete-Continuous Diffusion Layout Transformer </br>
+                <br>
+                <small>ICCV 2023</small>
+            </h2>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li><a href="https://www.linkedin.com/in/elad-levi-a938a3121/" target="_blank" rel="noopener noreferrer">Elad Levi</a></li>
+                    <li><a href="https://www.linkedin.com/in/eli-brosh-058989/" target="_blank" rel="noopener noreferrer">Eli Brosh</a></li>
+                    <li><a href="https://www.linkedin.com/in/mykola-mykhailych/" target="_blank" rel="noopener noreferrer">Mykola Mykhailych</a></li>
+                    <li><a href="https://www.linkedin.com/in/meirperez/" target="_blank" rel="noopener noreferrer">Meir Perez</a></li>
+                </ul>
+                <strong>WIX.com</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <ul class="nav nav-pills nav-justified">
+                    <li>
+                        <a href="https://arxiv.org/abs/2303.03755" target="_blank" rel="noopener noreferrer">
+                            <img src="icon/description.svg" height="50px">
+                            <h4><strong>Paper</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="icon/github.png" height="50px">
+                            <h4><strong>Code (will be released soon)</strong></h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="icon/slideshow.svg" height="50px">
+                            <h4><strong>Slide (??)</strong></h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Abstract</h3>
+                <p class="text-justify">
+                    Generating visual layouts is an essential ingredient of graphic design. The ability to condition layout generation on
+                    a partial subset of component attributes is critical to real-world applications that involve user
+                    interaction. Recently, diffusion models have demonstrated high-quality generative performances in
+                    various domains. However, it is unclear how to apply diffusion models to the natural representation
+                    of layouts which consists of a mix of discrete (class) and continuous (location, size) attributes.
+                    To address the conditioning layout generation problem, we introduce DLT, a joint discrete-continuous
+                    diffusion model. DLT is a transformer-based model which has a flexible conditioning mechanism that
+                    allows for conditioning on any given subset of all the layout component classes, locations, and
+                    sizes. Our method outperforms state-of-the-art generative models on various layout generation
+                    datasets with respect to different metrics and conditioning settings. Additionally, we validate the
+                    effectiveness of our proposed conditioning mechanism and the joint continuous-diffusion process.
+                    This joint process can be incorporated into a wide range of mixed discrete-continuous generative
+                    tasks.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Joint Diffusion process</h3>
+                <p class="text-justify">The diffusion process is applied jointly on both the continuous attributes of the components (size and location) by adding a small Gaussian noise, and on the discrete  attributes of the components (class) by adding a noise that adds a mass to the Mask class. The reverse diffusion model can be conditioned on any given subset of the attributes.</p>
+                <p class="text-center">
+                    <a href="./images/diffusion_process4.png" data-lightbox="gallery">
+                            <img src="./images/diffusion_process4.png" class="img-rounded" width="50%">
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Architecture details</h3>
+                <p class="text-justify">
+                    The transformer is fed with an embedding that represents step
+                    <strong><span style="font-size: 16px;">t</span></strong>
+                    of the diffusion process and an embedding for each of the layout components. The output is the
+                    cleaned coordinates and classes of components. During inference, the output is noised back to step
+                    <strong><span style="font-size: 16px;">t-1</span></strong>.
+                </p>
+
+                <div class="row">
+                    <a href="./images/model_architecture.png" data-lightbox="gallery">
+                            <img src="./images/model_architecture.png" class="img-rounded" width="100%">
+                    </a>
+
+                </div>
+                <p class="text-justify">
+                    The component embedding consists of a concatenation of position embedding, size embedding and class
+                    embedding. Each one of the three sub-embeddings can be either generated from the diffusion process
+                    or from the conditioning information. The model is explicitly informed which part of the input is
+                    part of the diffusion process by adding a trainable vector to the sub-embedding in case the
+                    attribute is part of the conditioning. This condition embedding is separate for each attribute.
+                </p>
+                <br>
+                <h3>Results</h3>
+                <p class="text-justify">
+                    Qualitative comparison of generated layouts between all tested methods on PubLayNet and Magazine
+                    datasets with the three tested conditioning settings.
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="./images/qualitive2.png" data-lightbox="gallery">
+                            <img src="./images/qualitive2.png" class="img-rounded" width="100%">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="./images/magazine_fig.png" data-lightbox="gallery">
+                            <img src="./images/magazine_fig.png" class="img-rounded" width="100%">
+                        </a>
+                    </div>
+                </div>
+                <p class="text-justify">
+                    For more details refer to <a href="https://arxiv.org/abs/2303.08137">our paper</a> and <a href="">
+                        code</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Citation</h3>
+                <div class="form-group col-md-12">
+                    <pre>
+@misc{levi2023dlt,
+      title={DLT: Conditioned layout generation with Joint Discrete-Continuous Diffusion Layout Transformer},
+      author={Elad Levi and Eli Brosh and Mykola Mykhailych and Meir Perez},
+      year={2023},
+      eprint={2303.03755},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Acknowledgements</h3>
+                <p class="text-justify">
+                    The website template was borrowed from <a href="https://github.com/jonbarron/website/tree/master/mipnerf">Mip-NeRF 360</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <footer class="text-center">
+        &#169; WIX.com<br />
+        Last Update: 2023-08-01
+    </footer>
+</body>
+</html>
