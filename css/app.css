@@ -1,5 +1,8 @@
 /* Copied from: https://raw.githubusercontent.com/jonbarron/website/master/mipnerf360/css/app.css */
 /* latin-ext */
+.custom-nav-list .nav-item {
+    margin-right: 10px;
+}
 @font-face {
     font-family: 'Lato';
     font-style: italic;
@@ -158,3 +161,20 @@
       margin-left: 0.5em;
       margin-right: 0.5em;
   }
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Grey background */
+    color: #000; /* Black arrow color */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker grey on hover */
+}
