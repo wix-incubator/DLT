@@ -104,6 +104,19 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+                <h3>Motivation</h3>
+                <p class="text-justify">
+                    We propose a framework for layout, document, and graphic design generation. Our framework is based on
+                    transformer encoder architecture and diffusion models. It allows to generate both discrete and
+                    continuous attributes of the layout components. You can easily condition the generation on any subset of
+                    the layout component attributes. Besides that, It's easy to extend our framework to condition not only on the layout
+                    component attributes but also on the document attributes.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
                 <h3>Abstract</h3>
                 <p class="text-justify">
                     Generating visual layouts is an essential ingredient of graphic design. The ability to condition layout generation on
@@ -161,8 +174,11 @@
                 <br>
                 <h3>Results</h3>
                 <p class="text-justify">
-                    Qualitative comparison of generated layouts between all tested methods on PubLayNet, Rico and Magazine
-                    datasets with the three tested conditioning settings.
+                    Qualitative comparison of generated layouts between all tested methods on <strong>PubLayNet</strong>,
+                    <strong>Rico</strong> and <strong>Magazine</strong>
+                    datasets. The top left image is the ground truth layout, that we used as a condition for <strong>
+                    Category</strong> (top right) and <strong>Category + Size</strong> (bottom left) settings.
+                    The bottom right image is the generated <strong>without any conditioning</strong>.
                 </p>
 <!--                <div class="row">-->
 <!--                    <div class="col-md-6">-->
