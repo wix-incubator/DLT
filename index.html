@@ -104,19 +104,6 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>Motivation</h3>
-                <p class="text-justify">
-                    We propose a framework for layout, document, and graphic design generation. Our framework is based on
-                    transformer encoder architecture and diffusion models. It allows to generate both discrete and
-                    continuous attributes of the layout components. You can easily condition the generation on any subset of
-                    the layout component attributes. Besides that, It's easy to extend our framework to condition not only on the layout
-                    component attributes but also on the document attributes.
-                </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
                 <h3>Abstract</h3>
                 <p class="text-justify">
                     Generating visual layouts is an essential ingredient of graphic design. The ability to condition layout generation on
@@ -138,8 +125,9 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>Joint Diffusion process</h3>
-                <p class="text-justify">The diffusion process is applied jointly on both the continuous attributes of the components (size and location) by adding a small Gaussian noise, and on the discrete  attributes of the components (class) by adding a noise that adds a mass to the Mask class. The reverse diffusion model can be conditioned on any given subset of the attributes.</p>
+                <h3>Joint Discrete-Continous Diffusion Process</h3>
+                <p class="text-justify"> We propose a framework for generating layout, document, and graphic designs using a transformer encoder and a diffusion model architecture. It supports both discrete and continuous attribute generation and can be conditioned on any specific layout component attributes. </p>
+                <p class="text-justify"> The diffusion process is applied jointly on both the continuous attributes of the components (size and location) by adding a small Gaussian noise, and on the discrete  attributes of the components (class) by adding a noise that adds a mass to the Mask class. The reverse diffusion model can be conditioned on any given subset of the attributes.</p>
                 <p class="text-center">
                     <a href="./images/diff.png" data-lightbox="gallery">
                             <img src="./images/diff.png" class="img-rounded" width="100%">
@@ -150,7 +138,7 @@
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>Architecture details</h3>
+                <h3>Architecture Details</h3>
                 <p class="text-justify">
                     The transformer is fed with an embedding that represents step
                     <strong><span style="font-size: 16px;">t</span></strong>
