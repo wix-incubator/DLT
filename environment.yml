@@ -1,0 +1,32 @@
+name: dlt
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.9
+  - pip=23.0.1
+  - numpy
+  - scikit-learn
+  - scipy
+  - opencv
+  - pytorch=2.0.0
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.7
+  - pip:
+      - absl-py
+      - coloredlogs
+      - wandb
+      - seaborn
+      - accelerate
+      - diffusers["torch"]
+      - blobfile
+      - einops
+      - path.py
+      - matplotlib
+      - ml_collections
+      - tqdm
+      - tabulate
+      - ipdb
+      - labml_nn
